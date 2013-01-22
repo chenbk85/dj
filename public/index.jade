@@ -13,12 +13,12 @@ html
     //if IE lt 9
       script
         $(function () {
-          var hack = '<div style="height: 20px; background-color: red; color: white; text-align: center; padding: 5px;">'
+          var hack = '<div style="display: none; background-color: red; color: white; text-align: center; padding: 5px; border: yellow solid 1px;">'
             + "Having trouble viewing this page? Use a web browser, such as Chrome or Firefox, instead."
             + "</div>"
             ;
 
-          $(hack).prependTo('.js-header-wrapper');
+          $(hack).prependTo('.js-header-wrapper').slideDown();
         });
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js")
     script(src="app.js")
