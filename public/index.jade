@@ -1,7 +1,7 @@
 !!! 5
 html
   head
-    title AJ the DJ
+    title AJ the DJ (Utah County)
     meta(http-equiv='X-UA-Compatible', content='IE=Edge,chrome=1')
     meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
     meta(charset='utf-8')
@@ -12,16 +12,21 @@ html
     link(rel='stylesheet', href='style.css', type='text/css', media='print')
     //if IE lt 9
       script
-        setTimeout(function () {
-          alert("If you have trouble viewing this page, please switch to a Web Browser such as Chrome or Firefox");
-        }, 500);
+        $(function () {
+          var hack = '<div style="height: 20px; background-color: red; color: white; text-align: center; padding: 5px;">'
+            + "Having trouble viewing this page? Use a web browser, such as Chrome or Firefox, instead."
+            + "</div>"
+            ;
+
+          $(hack).prependTo('.js-header-wrapper');
+        });
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js")
     script(src="app.js")
     // script(src="pakmanaged.js")
   body
     .js-a-class-for-the-hash-thing.css-a-class-for-the-hash-thing
     .css-body-wrapper
-      .css-header-wrapper
+      .js-header-wrapper.css-header-wrapper
         .css-header
           img.css-left.css-logo(src='./images/logo-aj-white.png')
           .css-left
@@ -32,7 +37,7 @@ html
             h2 Weddings, YSA Events
           .css-clear
       .js-nav-wrapper.css-nav-wrapper
-        a.js-scroll(href='#mission') Mission
+        a.js-scroll(href='#mission') About
         a.js-scroll(href='#weddings') Weddings
         a.js-scroll(href='#ysa-events') YSA Events
         a.js-scroll(href='#utah-valley') Utah Valley
@@ -47,14 +52,27 @@ html
           a.css-relup(name="mission")
           h1 DJing with Purpose
           div
+            blockquote.
+              "Entertaining
+              Weddings,
+              Church,
+              Institute,
+              Youth,
+              and other (LDS-standards) dances,
+              social events and activities
+              in
+              Utah County,
+              Utah Valley,
+              and
+              Salt Lake County
+              for years"
             span.
               My goal is to create a positive, uplifting, and energetic atmosphere for your social event.
             ul
-              li Scheduling - Venues, Reception Halls, and Facebook Events
-              li MC - Announcing and progressing through activities
               li DJ - Selecting fun, danceable music (fast, slow, line, group, etc)
-              li
-                | Karaoke - On screen lyrics, music sans vocals
+              li MC - Announcing and orchestrating the evening's activities
+              li Scheduling - Venues, Reception Halls, and Facebook Events
+
         section.css-chunk
           a.css-relup(name="weddings")
           h1 Weddings
@@ -75,9 +93,10 @@ html
           div.css-testimonial
             div.css-left
               img(height="150", src="http://dropsha.re/files/cUobWQA/Natalia-Heftel-s-Wedding-00001-cropped.jpeg")
-              p.css-name Natalia Heftel
-              br
-              span.css-title Bride
+              p
+                span.css-name Natalia Heftel
+                br
+                span.css-title Bride
             p
               | "It was so hectic... but I remember 
               strong every time I heard the music I was like, this is perfect! 
@@ -145,9 +164,13 @@ html
           div.css-testimonial
             div.css-left
               img(height="150", src="http://dropsha.re/files/+OJZZgA/Amanda-Gubler-Baseball-cropped.jpeg")
-              p.css-name Amanda Gubler
-              br
-              span.css-title Activities Committee
+              p
+                span.css-name Amanda Gubler
+                br
+                span.css-title
+                  | Activities
+                  br
+                  | Committee
             p.
               AJ was a great addition to our ward Halloween party. Everyone enjoyed dancing to the music and the lights and fog machine really took the party over the top.
             .css-clear
