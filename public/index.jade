@@ -51,7 +51,8 @@ html
           img.css-left.css-logo(src='./images/logo-aj-white.png')
           .css-left
             h1 AJ the DJ
-            h2 317.426.6525
+            h2
+              a(href="tel:+13174266525") 317.426.6525
           .css-right
             h1 Social, Classy, Fun
             h2 Weddings, LDS Events
@@ -63,10 +64,12 @@ html
         a.js-scroll(href='#ysa-events') LDS Events
         a.js-scroll(href='#utah-valley') Utah Valley
         a.js-scroll(href='#pricing') Payment
-        a(href='https://facebook.com/CoolAJtheDJ', target='_blank')
-          img(src="http://aib.msu.edu/graphics/facebook_logo.png", width="24px")
         a(href='https://twitter.com/CoolAJtheDJ', target='_blank')
           img(src="http://nyuad.nyu.edu/apps/nyuad/docroot/images/global/icons/icon-footer-twitter.png", width="24px")
+        a(href='https://facebook.com/CoolAJtheDJ', target='_blank')
+          img(src="http://aib.msu.edu/graphics/facebook_logo.png", width="24px")
+        a.css-fb-like
+          include like.html
       .css-content-wrapper
         section.css-chunk
           a.css-relup(name="mission")
@@ -105,9 +108,11 @@ html
           p
             span AJ ONeal
             br
-            span (317) 426-6525
+            span
+              a(href="tel:+13174266525") (317) 426-6525
             br
-            span AJ@the.DJ
+            span
+              a(href="mailto:AJ@the.DJ") AJ@the.DJ
 
         section.css-chunk
           a.css-relup(name="weddings")
@@ -277,12 +282,15 @@ html
       .css-footer-wrapper
         span © 2010-2013 AJ ONeal 
         span  - 
-        span (317) 426-6525 
+        span
+          a(href="tel:+13174266525") (317) 426-6525
         span  - 
-        span AJ@the.DJ
+        span
+          a(href="mailto:AJ@the.DJ") AJ@the.DJ
         br
         br
         span.
           728 W 1720 N #219 • Provo, UT • 84604
       section.css-chunk
       section.css-chunk
+    include fb.html
